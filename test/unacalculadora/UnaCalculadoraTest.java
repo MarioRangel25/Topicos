@@ -69,14 +69,14 @@ public class UnaCalculadoraTest {
     /**
      * Test of PRUEBA method, of class UnaTalCalculadora.
      */
-//    @Test
-//    public void tests() {
-//        System.out.println("Probando...TEST");
-//        UnaCalculadora instance2 = new UnaCalculadora();
-//        //Comparo si los dos objetos son iguales el assertSame es el indicado para comparar objetos.
-//        assertEquals("¿Son o no iguales los objetos?",instance,instance2);
-//        assertSame("¿Son o no iguales los objetos?",instance, instance2);        
-//    }
+    @Test
+    public void tests() {
+        System.out.println("Probando...TEST");
+        UnaCalculadora instance2 = new UnaCalculadora();
+        //Comparo si los dos objetos son iguales el assertSame es el indicado para comparar objetos.
+        assertEquals("¿Son o no iguales los objetos?",instance,instance2);
+        assertSame("¿Son o no iguales los objetos?",instance, instance2);        
+    }
 
     /**
      * Test of suma method, of class UnaTalCalculadora.
