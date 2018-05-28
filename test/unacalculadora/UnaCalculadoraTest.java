@@ -74,8 +74,7 @@ public class UnaCalculadoraTest {
         System.out.println("Probando...TEST");
         UnaCalculadora instance2 = new UnaCalculadora();
         //Comparo si los dos objetos son iguales el assertSame es el indicado para comparar objetos.
-        //Debe salir error, los dos objetos tienen mismo atributos de calculadora pero estan alojados en diferente campo de memoria. 
-        assertEquals("¿Son o no iguales los objetos?",instance,instance2);
+        //Debe salir error, los dos objetos tienen mismo atributos de calculadora pero estan alojados en diferente campo de memoria.         
         assertSame("¿Son o no iguales los objetos?",instance, instance2);        
         //Cerrar
     }
