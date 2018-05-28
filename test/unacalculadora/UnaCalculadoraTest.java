@@ -65,17 +65,18 @@ public class UnaCalculadoraTest {
         System.out.println("After()");
         instance.limpiar();
     }
-    
+
     /**
      * Test of PRUEBA method, of class UnaTalCalculadora.
      */
-//    @Test
-//    public void tests() {
-//        System.out.println("Probando...TEST");
-//        UnaCalculadora instance2 = new UnaCalculadora();
-//        //Comparo si los dos objetos son iguales el assertSame es el indicado para comparar objetos.
-//        assertSame("¿Son o no iguales los objetos?",instance, instance2);                
-//    }
+    @Test
+    public void tests() {
+        System.out.println("Probando...TEST");
+        UnaCalculadora instance2 = new UnaCalculadora();
+        //Comparo si los dos objetos son iguales el assertSame es el indicado para comparar objetos.
+        //Debe salir error, los dos objetos son iguales en atributos de calculadora pero estan en diferente campo de memoria.        
+        assertSame("¿Son o no iguales los objetos?", instance, instance2);
+    }
 
     /**
      * Test of suma method, of class UnaTalCalculadora.
@@ -86,7 +87,7 @@ public class UnaCalculadoraTest {
         int result = instance.suma(a, b);
         assertEquals(exp, result);
         //asserTrue asegura que una condición sea verdadera
-        assertTrue("¿Es verdadero?",exp == result);
+        assertTrue("¿Es verdadero?", exp == result);
     }
 
     /**
@@ -99,7 +100,7 @@ public class UnaCalculadoraTest {
         int result = instance.resta(7, 2);
         assertEquals(expResult, result);
         //Todo lo contrario al assertTrue. Este afirma una condición falsa
-        assertFalse("¿Es falso?",expResult != result);
+        assertFalse("¿Es falso?", expResult != result);
         System.out.println("El Resultado es : " + result + ", el esperado es : " + expResult);
     }
 
@@ -112,7 +113,7 @@ public class UnaCalculadoraTest {
         int add = 4;
         int expResult = 4;
         int result = instance.agregar(add);
-        assertEquals("¿Son iguales?",expResult, result);
+        assertEquals("¿Son iguales?", expResult, result);
         System.out.println("El Resultado es : " + result + ", el esperado es : " + expResult);
     }
 
@@ -125,7 +126,7 @@ public class UnaCalculadoraTest {
         int del = 3;
         int expResult = -3;
         int result = instance.quitar(del);
-        assertEquals("¿Son iguales?",expResult, result);
+        assertEquals("¿Son iguales?", expResult, result);
         System.out.println("El Resultado es : " + result + ", el esperado es : " + expResult);
     }
 
@@ -137,7 +138,7 @@ public class UnaCalculadoraTest {
         System.out.println("Producto()");
         int result = instance.producto(4, 3);
         int expResult = 12;
-        assertEquals("¿Son iguales?",expResult, result);
+        assertEquals("¿Son iguales?", expResult, result);
         System.out.println("El Resultado es : " + result + ", el esperado es : " + expResult);
     }
 
@@ -147,8 +148,8 @@ public class UnaCalculadoraTest {
     @Test(expected = ArithmeticException.class)
     public void testDividirEntreCero() {
         System.out.println("DividirEntreCero()");
-        int result = instance.dividir(4, 0);                
-        assertNotNull("¿No es nulo?",result);
+        int result = instance.dividir(4, 0);
+        assertNotNull("¿No es nulo?", result);
     }
 
     /**
@@ -160,8 +161,8 @@ public class UnaCalculadoraTest {
         int result = instance.dividir(4, 2);
         int expResult = 2;
         //El assertNotNull indica que el objeto o valor no debe ser nulo.
-        assertNotNull("¿No es nulo?",result);
-        assertEquals("¿Son iguales?",result, expResult);
+        assertNotNull("¿No es nulo?", result);
+        assertEquals("¿Son iguales?", result, expResult);
         System.out.println("El Resultado es : " + result + ", el esperado es : " + expResult);
     }
 
